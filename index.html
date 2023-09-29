@@ -11,6 +11,7 @@
 <body>
     <div class="navbar-cont">
         <div class="navbar-priority-cont">
+
             <div class="name-cont">
                 <h1>
                     Kanban Board
@@ -18,19 +19,22 @@
                 <span>Personal project</span>
             </div>
 
+            <div class="tasks-btns">
+                <div class="tasks">
+                    <label>Tasks: </label>
+                    <select>
+                        <option>Open</option>
+                        <option>Assigned</option>
+                        <option>In-progress</option>
+                        <option>Closed</option>
+                    </select>
+                </div>
 
-            <div class="tasks">
-                <label>Tasks: </label>
-                <select>
-                    <option>Open</option>
-                    <option>Assigned</option>
-                    <option>In-progress</option>
-                    <option>Closed</option>
-                </select>
-
-                <button class="add-btn">+ Add</button>
+                <div class="buttons">
+                    <button class="btn" type="submit">+ Add</button>
+                    <button class="btn" type="submit"> - Delete</button>
+                </div>
             </div>
-            
         </div>
     </div>
 
