@@ -2,10 +2,19 @@
 
 const modal = document.querySelector('.modal')
 const addBtn = document.querySelector('.add.btn')
+
 let addModalFlag = false
 
+
 addBtn.addEventListener('click', () => {
-    console.log(addModalFlag);
+
+    if (modal.style.display == 'block'){
+        addModalFlag = true
+    }
+    else{
+        addModalFlag = false
+    }
+
     addModalFlag = !addModalFlag
     if (addModalFlag == true){
         modal.style.display = 'block'
@@ -93,7 +102,7 @@ modalButtons.forEach(function(button){
     button.addEventListener('click', function(){
         addTask(button)
         modal.style.display = 'none'
-        let addModalFlag = false
+        addModalFlag = false
     })
 })
 
