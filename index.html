@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0a3b3b2e81.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Navbar -->
     <div class="navbar-cont">
         <div class="navbar-priority-cont">
 
@@ -23,19 +25,72 @@
                 <div class="tasks">
                     <label>Tasks: </label>
                     <select>
-                        <option>Open</option>
-                        <option>Assigned</option>
-                        <option>In-progress</option>
-                        <option>Closed</option>
+                        <option class="all">All</option>
+                        <option class="Open">Open</option>
+                        <option class="Assigned">Assigned</option>
+                        <option class="In-progress">In-progress</option>
+                        <option class="Closed">Closed</option>
                     </select>
                 </div>
 
-                <div class="buttons">
-                    <button class="btn" type="submit">+ Add</button>
-                    <button class="btn" type="submit"> - Delete</button>
+                <div class="action-btn">
+                    <div class="add btn" type="submit" id="add-btn">
+                        <i class="fa-regular fa-plus fa-lg"></i>
+                    </div>
+                    <div class="delete btn" type="submit">
+                        <i class="fa-solid fa-trash fa-lg"></i>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" >
+        <div class="modal-cont">
+
+            <div class="task-textArea-cont">
+                <input type="text" class="task-cont" placeholder="Enter the Task">
+                <textarea class="textArea-cont" placeholder="Enter your Details"></textarea>
+            </div>
+
+            <div class="color-cont">
+                <div class="Open tasks-color-cont" type="submit"> Open</div>
+                <div class="Assigned tasks-color-cont" type="submit">Assigned</div>
+                <div class="In-progress tasks-color-cont" type="submit">In-progress</div>
+                <div class="Closed tasks-color-cont" type="submit">Closed</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ticket -->
+
+    <div class="main-cont">
+        <!-- <div class="ticket-cont" color="Open">
+            <div class="Open ticket-color"></div>
+            <div class="ticket-id"></div>
+            <div class="ticket-area">
+                <i class="fa-solid fa-lock fa-lg" id="lock"></i>
+            </div>
+        </div>
+
+        <div class="ticket-cont" color="In-progress">
+            <div class="In-progress ticket-color"></div>
+            <div class="ticket-id"></div>
+            <div class="ticket-area">
+                <i class="fa-solid fa-lock fa-lg" id="lock"></i>
+            </div>
+        </div>
+
+
+        <div class="ticket-cont" color="Closed">
+            <div class="Closed ticket-color"></div>
+            <div class="ticket-id"></div>
+            <div class="ticket-area">
+                <i class="fa-solid fa-lock fa-lg" id="lock"></i>
+            </div>
+        </div> -->
+
     </div>
 
 
