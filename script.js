@@ -8,12 +8,10 @@ let addModalFlag = false
 
 addBtn.addEventListener('click', () => {
 
-    if (modal.style.display == 'block'){
-        addModalFlag = true
-    }
-    else{
+    if (modal.style.display == 'none'){
         addModalFlag = false
     }
+
 
     addModalFlag = !addModalFlag
     if (addModalFlag == true){
@@ -105,6 +103,3 @@ modalButtons.forEach(function(button){
         addModalFlag = false
     })
 })
-
-
-
