@@ -50,15 +50,17 @@
         <div class="modal-cont">
 
             <div class="task-textArea-cont">
-                <input type="text" class="task-cont" placeholder="Enter the Task">
+                <!-- <input type="text" class="task-cont" placeholder="Enter the Task"> -->
+                <div class="task-cont" ></div>
                 <textarea class="textArea-cont" placeholder="Enter your Details"></textarea>
             </div>
 
-            <div class="color-cont">
-                <div class="Open tasks-color-cont" type="submit"> Open</div>
-                <div class="Assigned tasks-color-cont" type="submit">Assigned</div>
-                <div class="In-progress tasks-color-cont" type="submit">In-progress</div>
-                <div class="Closed tasks-color-cont" type="submit">Closed</div>
+            <!-- tabindex makes the div element focusable to capture keyboard events -->
+            <div class="color-cont" tabindex="0">
+                <div class="Open tasks-color-cont active">Open</div>
+                <div class="Assigned tasks-color-cont">Assigned</div>
+                <div class="In-progress tasks-color-cont">In-progress</div>
+                <div class="Closed tasks-color-cont" >Closed</div>
             </div>
         </div>
     </div>
@@ -93,7 +95,7 @@
 
     </div>
 
-
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
     <script src="script.js"></script>
 </body>
 
