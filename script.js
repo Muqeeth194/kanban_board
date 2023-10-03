@@ -43,18 +43,21 @@ window.onclick = (e) => {
 
 tasks.addEventListener('change', (e) => {
     let taskName = tasks.value
-    // console.log(taskName);
+
     let ticketNames = document.querySelectorAll('.ticket-cont')
-    // console.log(ticketName);
+
 
     if (taskName === 'All') {
         ticketNames.forEach(function (ticket) {
             ticket.style.display = 'block'
+            // console.log('all is showing');
         })
     }
     else {
         ticketNames.forEach(function (ticket) {
             let ticketColor = ticket.getAttribute('color')
+            // console.log(ticketColor);
+
             if (taskName === ticketColor) {
                 ticket.style.display = 'block'
             }
@@ -65,53 +68,6 @@ tasks.addEventListener('change', (e) => {
     }
 })
 
-// Adding the tasks
-
-// let addTask = (button) => {
-//     let taskId = document.querySelector('.task-cont')
-//     let taskAreaCont = document.querySelector('.textArea-cont')
-
-//     let ticketCont = document.createElement('div')
-//     ticketCont.classList.add('ticket-cont')
-//     ticketCont.setAttribute('color', button.innerText)
-
-//     let ticketColor = document.createElement('div')
-//     ticketColor.classList.add(button.innerText, 'ticket-color')
-
-//     let ticketId = document.createElement('div')
-//     ticketId.classList.add('ticket-id')
-//     ticketId.innerText = taskId.value
-//     taskId.value = ''
-
-//     let ticketArea = document.createElement('div')
-//     ticketArea.classList.add('ticket-area')
-//     ticketArea.innerHTML = taskAreaCont.value
-//     taskAreaCont.value = ''
-
-//     let lockIcon = document.createElement('i')
-//     lockIcon.classList.add('fa-solid', 'fa-lock', 'fa-lg')
-//     lockIcon.id = 'lock'
-
-//     let ticketConsole = document.querySelector('.main-cont')
-//     ticketConsole.appendChild(ticketCont)
-
-//     ticketCont.appendChild(ticketColor)
-//     ticketCont.appendChild(ticketId)
-//     ticketCont.appendChild(ticketArea)
-
-//     ticketArea.appendChild(lockIcon)
-// }
-
-
-
-// const modalButtons = document.querySelectorAll('.tasks-color-cont');
-// modalButtons.forEach(function(button){
-//     button.addEventListener('click', function(){
-//         addTask(button)
-//         modal.style.display = 'none'
-//         addModalFlag = false
-//     })
-// })
 
 // Focus the clicked color option and get the color of the div
 allPriority.forEach(priority => {
@@ -156,6 +112,7 @@ function submit(event) {
 function createTicket(taskDesc, taskNum, taskColor) {
     let ticketCont = document.createElement('div')
     ticketCont.classList.add('ticket-cont')
+    ticketCont.setAttribute('color', taskColor)
 
     // console.log(ticketCont);
 
